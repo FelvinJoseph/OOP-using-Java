@@ -1,0 +1,33 @@
+public class palindrome
+{
+    public static void main(String[] args)
+    {
+        pal str=new pal();
+        str.s=new char[]{'r','a','d','a','r'};
+        str.n=5;
+        str.checker();
+    }
+}
+class pal
+{
+    char s[];
+    int n;
+    void checker()
+    {
+        int flag=0,i;
+        
+        for(i=0;i<n/2;i++)
+        {
+            if(s[i]!=s[n-i-1])
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0)
+        System.out.println("Palindrome");
+        else
+        System.out.println("Not a palindrome");
+        System.out.println();
+    }
+}
