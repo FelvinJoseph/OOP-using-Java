@@ -1,0 +1,21 @@
+public class characterFrequencyFinder
+{
+    public static void main(String[] args)
+    {
+        char str[]={'i','n','d','i','a','n'};
+        char key='n';
+        int i,num=0;
+        for(i=0;i<6;i++)
+        {
+            if(str[i]==key)
+            {
+                num++;
+            }
+        }
+        if(num==0)
+        System.out.println("Character not found");
+        else
+        System.out.println("character is repeated "+num+" times");
+
+    }
+}
