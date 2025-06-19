@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class polyArea
+{
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter the no of sides: ");
+        int n=in.nextInt();
+        System.out.print("Input the length of one of the sides: ");
+        double side = in.nextDouble();
+        System.out.println("Area of polygon is: " + polygonArea(n,side));
+    }
+    public static double polygonArea(int n,double side)
+    {
+        return ((n*side*side)/(4*Math.tan(Math.PI/n)));
+    }
+}
