@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class binToHex
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the binary number: ");
+        int bin=sc.nextInt();
+        int[] hex=new int[20];
+        int dec=0,rem,pow=1,i=0;
+        while(bin>0)
+        {
+            rem=bin%10;
+            dec+= rem*pow;
+            pow*=2;
+            bin/=10;
+        }
+        while(dec>0)
+        {
+            rem=dec%16;
+            hex[i++]=rem;
+            dec/=16;
+        }
+        System.out.println("Hexadecimal number is: ");
+        for(int j=i-1;j>=0;j--)
+        {
+            if(hex[j]>9)
+            {
+                System.out.print((char)(hex[j] + 55));
+            }
+            else
+            {
+                System.out.print(hex[j]);
+            }
+        }
+        System.out.println();
+    }
+}
