@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class test
+{
+    public static void main(String[] args)
+    {
+        int rem,i=0;
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter the decimal number: ");
+        int num=in.nextInt();
+        int[] oct=new int[20];
+        while(num>0)
+        {
+            rem=num%8;
+            oct[i++]=rem;
+            num/=8;
+        }
+        
+        System.out.print("Octal number is: ");
+        for(int j=i-1;j>=0;j--)
+        {
+            System.out.print(oct[j]);
+        }
+    }
+}
