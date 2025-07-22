@@ -1,0 +1,16 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.TimeZone;
+
+public class time 
+{
+    public static void main(String args[])
+    {
+        SimpleDateFormat cdt = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+        
+        //set the time zone of calendar to gmt
+        cdt.setCalendar(Calendar.getInstance(TimeZone.getTimeZone("IST")));
+        
+        System.out.println("\nNow: "+cdt.format(System.currentTimeMillis()));
+    }
+}
