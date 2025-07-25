@@ -1,0 +1,28 @@
+import java.util.*;
+public class prime
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the limit number: ");
+        int n = in.nextInt();
+        int sum=2;
+        for(int i=3;i<=n;i+=2)
+        {
+            if(isOdd(i))
+            {
+                sum += i;
+            }
+        }
+        System.out.println("Sum of prime nos till "+ n+" is : "+sum);
+    }
+    public static boolean isOdd(int n)
+    {
+        for(int j=3;j<=n/2;j++)
+        {
+            if(n%j == 0)
+                return false;
+        }
+        return true;
+    }
+}
