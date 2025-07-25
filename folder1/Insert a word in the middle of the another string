@@ -1,0 +1,12 @@
+import java.lang.*;
+public class concat
+{
+    public static void main(String[] args)
+    {
+        //Scanner in = new Scanner(System.in);
+        String mainString = "Python 3.0";
+        String word = "Tutorial";
+        String res = mainString.substring(0,7)+word+mainString.substring(6);
+        System.out.println(res);
+    }
+}
